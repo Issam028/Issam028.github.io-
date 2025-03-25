@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISSAM HARNOUFI | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --neon-blue: #0ff0fc;
+            --neon-purple: #bc13fe;
+            --dark-bg: #0a0a12;
+            --darker-bg: #050508;
+            --card-bg: rgba(15, 15, 30, 0.7);
+            --text-light: #e0e0ff;
+            --text-gray: #b0b0c0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(11, 227, 227, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(188, 19, 254, 0.1) 0%, transparent 50%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .download-cv {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: var(--dark-bg);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(15, 240, 252, 0.4);
+        }
+        
+
+        header {
+            padding: 40px 0;
+            position: relative;
+            border-bottom: 1px solid rgba(176, 176, 192, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue), 0 0 30px rgba(0, 255, 252, 0.3);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--neon-blue), 0 0 40px rgba(0, 255, 252, 0.5);
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(11, 227, 227, 0.3);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .title span {
+            color: var(--neon-blue);
+            font-weight: 600;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--neon-blue);
+            transform: translateY(-3px);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--neon-blue);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid rgba(176, 176, 192, 0.1);
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--neon-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: '>';
+            color: var(--neon-purple);
+            font-weight: bold;
+        }
+        
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(176, 176, 192, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            z-index: -1;
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .card:hover::before {
+            opacity: 0.3;
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--neon-blue);
+        }
+        
+        .card-date {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .card-subtitle {
+            color: var(--neon-purple);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .card li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--neon-blue);
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: rgba(15, 240, 252, 0.1);
+            color: var(--neon-blue);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(15, 240, 252, 0.3);
+        }
+        
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(176, 176, 192, 0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--neon-purple);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-category ul {
+            list-style-type: none;
+        }
+        
+        .skill-category li {
+            margin-bottom: 8px;
+            color: var(--text-gray);
+        }
+        
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(10, 10, 20, 0.7);
+            border: 1px solid rgba(176, 176, 192, 0.2);
+            border-radius: 5px;
+            color: var(--text-light);
+            font-family: 'Rajdhani', sans-serif;
+            transition: border 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 10px rgba(15, 240, 252, 0.2);
+        }
+        
+        button {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: var(--dark-bg);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(15, 240, 252, 0.4);
+        }
+        
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+
+        @media (max-width: 768px) {
+            .download-cv {
+                position: static;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-cv">
+        <a href="Harnoufi_Issam_Cv_FullStack.pdf" class="download-btn" download>
+            <i class="fas fa-download"></i> Télécharger mon CV
+        </a>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="profile.jpg" alt="Issam Harnoufi" class="profile-pic floating">
+                <div class="header-text">
+                    <h1>ISSAM HARNOUFI</h1>
+                    <div class="title">Développeur <span>Full-Stack</span> | Spécialiste <span>JavaScript/PHP</span></div>
+                    <p>Je crée des solutions web innovantes avec des technologies modernes. Passionné par le développement d'applications performantes et esthétiques.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/issam-harnoufi-39b1b42b2/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Issam028" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@trapvfx6507/videos" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:issamharnoufi@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <nav>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">À Propos</a>
+                <a href="#experience" class="nav-link">Expérience</a>
+                <a href="#projects" class="nav-link">Projets</a>
+                <a href="#skills" class="nav-link">Compétences</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+        
+        <section id="about">
+            <h2><i class="fas fa-user-astronaut"></i> À Propos</h2>
+            <div class="card">
+                <p>Développeur Full-Stack passionné par la création de solutions innovantes. Je combine expertise technique et créativité pour développer des applications web performantes et intuitives.</p>
+                <p>Actuellement en Bachelor DEVOPS à l'EPSI Rennes, je recherche un stage pour mettre en pratique mes compétences en développement et contribuer à des projets ambitieux.</p>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">IoT</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2><i class="fas fa-rocket"></i> Expérience</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Développeur Back-End</div>
+                    <div class="card-date">Janv. 2025 - Présent</div>
+                </div>
+                <div class="card-subtitle">HotelConnect | Projet personnel</div>
+                <ul>
+                    <li>Conception d'une API REST avec Node.js/NestJS pour la gestion de réservations</li>
+                    <li>Intégration de capteurs IoT (Arduino) via requêtes HTTP</li>
+                    <li>Déploiement sur Render avec système d'e-mails automatisés (Nodemailer)</li>
+                    <li>Collaboration avec l'équipe front-end pour une intégration optimale</li>
+                </ul>
+                <a href="https://hotelconnect.fr/" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                    <i class="fas fa-external-link-alt"></i> Voir le projet
+                </a>
+                <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">NestJS</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">IoT</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Développeur Front-End</div>
+                    <div class="card-date">Sept. 2024</div>
+                </div>
+                <div class="card-subtitle">Workshop Créactimnov (Gagnant) | EPSI Rennes</div>
+                <ul>
+                    <li>Développement d'une application web de gestion de stock</li>
+                    <li>Création de maquettes avec Figma</li>
+                    <li>Montage vidéo du projet avec After Effects</li>
+                </ul>
+                <a href="https://issam028.github.io/online-MyDil/" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                    <i class="fas fa-external-link-alt"></i> Voir le projet
+                </a>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">Figma</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Développeur PHP/Laravel</div>
+                    <div class="card-date">Mars - Mai 2023</div>
+                </div>
+                <div class="card-subtitle">Stage | Marjane Berkane</div>
+                <ul>
+                    <li>Application web de gestion des demandes employés</li>
+                    <li>Recueil des besoins et développement en autonomie</li>
+                    <li>Technologies: Laravel, MySQL</li>
+                </ul>
+                <a href="https://github.com/IssamHarnoufi/Marjane-Project-" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                    <i class="fas fa-external-link-alt"></i> Voir le projet
+                </a>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Développeur Full-Stack</div>
+                    <div class="card-date">Janv. - Juin 2023</div>
+                </div>
+                <div class="card-subtitle">Projet de fin de formation | OFPPT ISTA Berkane</div>
+                <ul>
+                    <li>Conception et développement d'une plateforme de communication pour l'ISTA Berkane</li>
+                    <li>Front-end en React.js et back-end en Laravel</li>
+                    <li>Collaboration entre administration, formateurs et stagiaires</li>
+                    <li>Utilisation de Postman pour les tests API et Figma pour le design</li>
+                    <li>Gestion de projet avec Discord et Jira</li>
+                </ul>
+                <a href="https://istab-frontend1.vercel.app/" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                    <i class="fas fa-external-link-alt"></i> Voir le projet
+                </a>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">Postman</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Jira</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2><i class="fas fa-code"></i> Projets Récents</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Plateforme de communication ISTA</div>
+                    <div class="card-date">Janv. - Juin 2023</div>
+                </div>
+                <div class="card-subtitle">Projet de Fin d'Études | Full-Stack</div>
+                <ul>
+                    <li>Plateforme de communication pour administration/formateurs/stagiaires</li>
+                    <li>Front-end en React, Back-end en Laravel</li>
+                    <li>Gestion de projet avec Jira et Discord</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">Postman</span>
+                </div>
+            </div>
+            
+
+        </section>
+        
+        <section id="skills">
+            <h2><i class="fas fa-cogs"></i> Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Front-End</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>JavaScript/TypeScript</li>
+                        <li>HTML5/CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Back-End</h3>
+                    <ul>
+                        <li>Node.js/Express</li>
+                        <li>PHP/Laravel</li>
+                        <li>Python</li>
+                        <li>NestJS</li>
+                        <li>API REST</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Données</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>SQL</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Outils & DevOps</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Git/GitHub</li>
+                        <li>Jira</li>
+                        <li>Méthodes Agile</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2><i class="fas fa-paper-plane"></i> Contact</h2>
+            <div class="card">
+      
+                <form class="contact-form" action="https://formsubmit.co/reyissam0428@gmail.com" method="POST">
+          
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="_subject" placeholder="Sujet">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit">Envoyer le message</button>
+                </form>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <p>Ou contactez-moi directement :</p>
+                    <div style="margin-top: 15px;">
+                        <a href="mailto:issamharnoufi@gmail.com" style="color: var(--neon-blue); text-decoration: none;">
+                            <i class="fas fa-envelope"></i> issamharnoufi@gmail.com
+                        </a>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <a href="tel:+33782429156" style="color: var(--neon-blue); text-decoration: none;">
+                            <i class="fas fa-phone"></i> +33 7 82 42 91 56
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+    
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                
+                document.querySelectorAll('section').forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+
+   
+            const form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Merci pour votre message! Je vous répondrai dès que possible.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
