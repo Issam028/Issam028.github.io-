@@ -682,7 +682,6 @@
     </div>
     
     <script>
-
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             
@@ -692,14 +691,15 @@
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
                     
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
             
-    
             window.addEventListener('scroll', function() {
                 const scrollPosition = window.scrollY;
                 
@@ -718,14 +718,13 @@
                     }
                 });
             });
-
-   
+    
             const form = document.querySelector('.contact-form');
             if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Merci pour votre message! Je vous répondrai dès que possible.');
-                    form.reset();
+                form.addEventListener('submit', function() {
+                    setTimeout(() => {
+                        window.location.href = '/merci.html';
+                    }, 1500);
                 });
             }
         });
