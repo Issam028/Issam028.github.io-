@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV - Issam Harnoufi - Full-Stack Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <style>
+            @page {
+                size: A4;
+                margin: 1cm;
+            }
+            body {
+                font-family: 'Inter', sans-serif;
+                line-height: 1.3;
+                color: #2b2d42;
+                width: 210mm;
+                height: auto;
+                margin: 0 auto;
+                padding: 0;
+                font-size: 10pt;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .page {
+                display: grid;
+                grid-template-columns: 32% 68%;
+                min-height: 100%;
+            }
+            .left-column {
+                background-color: #1a1c2e;
+                color: white;
+                padding: 15px;
+            }
+            .right-column {
+                padding: 15px;
+                background-color: white;
+            }
+            .profile-header {
+                text-align: center;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(58, 134, 255, 0.3);
+            }
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #3a86ff;
+                margin: 0 auto 8px;
+            }
+            .left-column h1 {
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 1.3rem;
+                margin: 0;
+                letter-spacing: 0.5px;
+            }
+            .title {
+                font-size: 0.8rem;
+                color: #e9ecef;
+                margin: 3px 0 0 0;
+            }
+            .left-column h2 {
+                font-size: 1rem;
+                margin: 20px 0 10px 0;
+                color: #3a86ff;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .contact-info {
+                margin: 15px 0;
+            }
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                margin-bottom: 8px;
+                font-size: 0.8rem;
+            }
+            .contact-item i {
+                color: #3a86ff;
+                width: 16px;
+            }
+            .right-column h2 {
+                font-size: 1.1rem;
+                margin: 15px 0 10px 0;
+                color: #2b2d42;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                border-bottom: 1px solid #e0e0e0;
+                padding-bottom: 2px;
+            }
+            .section {
+                margin-bottom: 15px;
+            }
+            .job, .education {
+                margin-bottom: 12px;
+                position: relative;
+                padding-left: 16px;
+            }
+            .job::before, .education::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #3a86ff;
+            }
+            .job-title, .education-title {
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9rem;
+            }
+            .job-company {
+                font-weight: 500;
+                color: #3a86ff;
+                margin: 2px 0 5px 0;
+                font-size: 0.85rem;
+            }
+            ul {
+                padding-left: 16px;
+                margin: 6px 0;
+            }
+            li {
+                margin-bottom: 4px;
+                font-size: 0.85rem;
+                position: relative;
+            }
+            li::before {
+                position: absolute;
+                left: -14px;
+                color: #3a86ff;
+                font-size: 0.8rem;
+            }
+            .date {
+                font-style: italic;
+                color: #6c757d;
+                font-size: 0.75rem;
+            }
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                margin-top: 6px;
+            }
+            .tag {
+                background-color: #e9ecef;
+                color: #2b2d42;
+                padding: 2px 8px;
+                border-radius: 20px;
+                font-size: 0.65rem;
+                font-weight: 600;
+            }
+            .project-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                color: #3a86ff;
+                text-decoration: none;
+                margin-top: 4px;
+                font-size: 0.75rem;
+                font-weight: 500;
+            }
+            .skills-grid {
+                display: grid;
+                gap: 12px;
+            }
+            .skill-category {
+                margin-bottom: 10px;
+            }
+            .skill-category h3 {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+                color: #e9ecef;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            .skill-category ul {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5px 10px;
+            }
+            .skill-category li {
+                margin: 0;
+                padding: 0;
+                font-size: 0.75rem;
+            }
+            .languages {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .language {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 0.8rem;
+            }
+            @media print {
+                body {
+                    font-size: 9.5pt;
+                    line-height: 1.25;
+                }
+                .page {
+                    grid-template-columns: 32% 68%;
+                }
+                .left-column {
+                    padding: 12px;
+                }
+                .right-column {
+                    padding: 12px;
+                }
+                .profile-pic {
+                    width: 70px;
+                    height: 70px;
+                }
+                a {
+                    color: #3a86ff !important;
+                    text-decoration: none !important;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="page">
+        <div class="left-column">
+            <div class="profile-header">
+                <img src="profile.jpg" alt="Issam Harnoufi" class="profile-pic">
+                <h1>ISSAM HARNOUFI</h1>
+                <div class="title">Full-Stack Developer</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>2 Rue Robert Capa, 35690 Acigné</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>issamharnoufi@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+33 7 82 42 91 56</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://harnoufiissamportfolio.netlify.app/" style="color:inherit;">Portfolio</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/issam-harnoufi-39b1b42b2/" style="color:inherit;">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Issam028" style="color:inherit;">GitHub</a>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-microchip"></i> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL/NoSQL</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cubes"></i> Frameworks</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Node.js/Express</li>
+                        <li>Laravel</li>
+                        <li>NestJS</li>
+                        <li>Angular</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Git</li>
+                        <li>Jira</li>
+                        <li>Postman</li>
+                        <li>Figma</li>
+                        <li>Agile</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-language"></i> Languages</h2>
+            <div class="languages">
+                <div class="language">
+                    <span>French: Fluent</span>
+                </div>
+                <div class="language">
+                    <span>English: Fluent</span>
+                </div>
+                <div class="language">
+                    <span>Arabic: Native</span>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-brain"></i> Soft Skills</h2>
+            <ul>
+                <li>Collaboration</li>
+                <li>Autonomy</li>
+                <li>Creativity</li>
+                <li>Problem-solving</li>
+            </ul>
+
+            <h2><i class="fas fa-rocket"></i> Interests</h2>
+            <ul>
+                <li>Video editing</li>
+                <li>Weight training</li>
+                <li>Video games</li>
+                <li>Soccer</li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <div class="section">
+                <h2><i class="fas fa-user-astronaut"></i> Profile</h2>
+                <p>Passionate Full-Stack Developer focused on creating innovative solutions. Experienced in developing complete web applications with JavaScript, PHP and their frameworks. Looking for an internship to apply my skills and contribute to ambitious projects.</p>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-laptop-code"></i> Experience</h2>
+                <div class="job">
+                    <div class="job-title">
+                        <span>Back-End Developer</span>
+                        <span class="date">Jan. 2025–Present</span>
+                    </div>
+                    <div class="job-company">HotelConnect | Projet innov mind</div>
+                    <ul>
+                        <li>Designed a REST API (Node.js/NestJS) for booking management</li>
+                        <li>Integrated IoT sensors (Arduino) via HTTP requests</li>
+                        <li>Deployed on Render with automated email system</li>
+                    </ul>
+                    <a href="https://hotelconnect.fr/" class="project-link"><i class="fas fa-external-link-alt"></i> View project</a>
+                    <div class="tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">NestJS</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">
+                        <span>Front-End Developer</span>
+                        <span class="date">Sept. 2024</span>
+                    </div>
+                    <div class="job-company">Workshop Créactimnov (Winner) | EPSI Rennes</div>
+                    <ul>
+                        <li>Developed a web application for inventory management</li>
+                        <li>Created mockups with Figma</li>
+                        <li>Project video editing with After Effects</li>
+                    </ul>
+                    <a href="https://issam028.github.io/online-MyDil/" class="project-link"><i class="fas fa-external-link-alt"></i> View project</a>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">After Effects</span>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">
+                        <span>Full-Stack Developer</span>
+                        <span class="date">Jan. - June 2023</span>
+                    </div>
+                    <div class="job-company">Final training project | OFPPT ISTA Berkane</div>
+                    <ul>
+                        <li>Communication platform for ISTA Berkane</li>
+                        <li>Front-end in React.js and back-end in Laravel</li>
+                        <li>Collaboration between administration and trainers</li>
+                    </ul>
+                    <a href="https://istab-frontend1.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> View project</a>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Postman</span>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="job-title">
+                        <span>Back-End Developer</span>
+                        <span class="date">Mar. - May 2023</span>
+                    </div>
+                    <div class="job-company">Internship | Marjane (retail chain) Berkane</div>
+                    <ul>
+                        <li>Web application for employee request management</li>
+                        <li>Requirements gathering and independent development</li>
+                        <li>Technologies: Laravel, MySQL</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Laravel</span>
+                        <span class="tag"> MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="education">
+                    <div class="education-title">
+                        <span>Bachelor DEVOPS - Fullstack (Bac+3)</span>
+                        <span class="date">2024–2025</span>
+                    </div>
+                    <div>EPSI Rennes</div>
+                </div>
+                <div class="education">
+                    <div class="education-title">
+                        <span>Grande École Program (1st year)</span>
+                        <span class="date">2023–2024</span>
+                    </div>
+                    <div>EPITECH Rennes</div>
+                </div>
+                <div class="education">
+                    <div class="education-title">
+                        <span>Specialized Technician Diploma (Bac+2)</span>
+                        <span class="date">2021–2023</span>
+                    </div>
+                    <div>OFPPT ISTA Berkane (Morocco)</div>
+                </div>
+                <div class="education">
+                    <div class="education-title">
+                        <span>Baccalaureate in Physical Sciences</span>
+                        <span class="date">2021</span>
+                    </div>
+                    <div>Lycée Laymoune (Morocco)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
