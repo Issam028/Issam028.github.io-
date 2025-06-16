@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISSAM HARNOUFI | Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -18,24 +21,24 @@
             --text-light: #e0e0ff;
             --text-gray: #b0b0c0;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Rajdhani', sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.7;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 25% 25%, rgba(11, 227, 227, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 75% 75%, rgba(188, 19, 254, 0.1) 0%, transparent 50%);
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -48,7 +51,7 @@
             right: 20px;
             z-index: 100;
         }
-        
+
         .download-btn {
             display: flex;
             align-items: center;
@@ -65,25 +68,25 @@
             text-decoration: none;
             font-size: 0.9rem;
         }
-        
+
         .download-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(15, 240, 252, 0.4);
         }
-        
+
 
         header {
             padding: 40px 0;
             position: relative;
             border-bottom: 1px solid rgba(176, 176, 192, 0.1);
         }
-        
+
         .header-content {
             display: flex;
             align-items: center;
             gap: 40px;
         }
-        
+
         .profile-pic {
             width: 150px;
             height: 150px;
@@ -95,16 +98,16 @@
             z-index: 1;
             transition: transform 0.5s, box-shadow 0.5s;
         }
-        
+
         .profile-pic:hover {
             transform: scale(1.05);
             box-shadow: 0 0 20px var(--neon-blue), 0 0 40px rgba(0, 255, 252, 0.5);
         }
-        
+
         .header-text {
             flex: 1;
         }
-        
+
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
@@ -117,7 +120,7 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
         }
-        
+
         .title {
             font-size: 1.3rem;
             color: var(--text-gray);
@@ -125,42 +128,42 @@
             font-weight: 300;
             letter-spacing: 2px;
         }
-        
+
         .title span {
             color: var(--neon-blue);
             font-weight: 600;
         }
-        
+
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
-        
+
         .social-link {
             color: var(--text-gray);
             font-size: 1.2rem;
             transition: all 0.3s;
         }
-        
+
         .social-link:hover {
             color: var(--neon-blue);
             transform: translateY(-3px);
             text-shadow: 0 0 10px var(--neon-blue);
         }
-        
+
 
         nav {
             display: flex;
             justify-content: center;
             margin: 30px 0;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 30px;
         }
-        
+
         .nav-link {
             color: var(--text-gray);
             text-decoration: none;
@@ -171,11 +174,11 @@
             padding: 5px 0;
             transition: color 0.3s;
         }
-        
+
         .nav-link:hover {
             color: var(--neon-blue);
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -186,21 +189,21 @@
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
             transition: width 0.3s;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
 
         section {
             padding: 50px 0;
             border-bottom: 1px solid rgba(176, 176, 192, 0.1);
         }
-        
+
         section:last-child {
             border-bottom: none;
         }
-        
+
         h2 {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
@@ -210,13 +213,13 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         h2::before {
             content: '>';
             color: var(--neon-purple);
             font-weight: bold;
         }
-        
+
 
         .card {
             background: var(--card-bg);
@@ -229,12 +232,12 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
-        
+
         .card::before {
             content: '';
             position: absolute;
@@ -248,59 +251,59 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
+
         .card:hover::before {
             opacity: 0.3;
         }
-        
+
         .card-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
         }
-        
+
         .card-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.2rem;
             color: var(--neon-blue);
         }
-        
+
         .card-date {
             color: var(--text-gray);
             font-size: 0.9rem;
         }
-        
+
         .card-subtitle {
             color: var(--neon-purple);
             margin-bottom: 10px;
             font-size: 0.95rem;
         }
-        
+
         .card ul {
             list-style-type: none;
             padding-left: 0;
         }
-        
+
         .card li {
             position: relative;
             padding-left: 20px;
             margin-bottom: 8px;
         }
-        
+
         .card li::before {
             content: '▹';
             position: absolute;
             left: 0;
             color: var(--neon-blue);
         }
-        
+
         .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 15px;
         }
-        
+
         .tag {
             background: rgba(15, 240, 252, 0.1);
             color: var(--neon-blue);
@@ -309,21 +312,21 @@
             font-size: 0.8rem;
             border: 1px solid rgba(15, 240, 252, 0.3);
         }
-        
+
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
-        
+
         .skill-category {
             background: var(--card-bg);
             border-radius: 8px;
             padding: 20px;
             border: 1px solid rgba(176, 176, 192, 0.1);
         }
-        
+
         .skill-category h3 {
             color: var(--neon-purple);
             margin-bottom: 15px;
@@ -333,27 +336,28 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .skill-category ul {
             list-style-type: none;
         }
-        
+
         .skill-category li {
             margin-bottom: 8px;
             color: var(--text-gray);
         }
-        
+
 
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
-        input, textarea {
+
+        input,
+        textarea {
             width: 100%;
             padding: 12px;
             background: rgba(10, 10, 20, 0.7);
@@ -363,13 +367,14 @@
             font-family: 'Rajdhani', sans-serif;
             transition: border 0.3s;
         }
-        
-        input:focus, textarea:focus {
+
+        input:focus,
+        textarea:focus {
             outline: none;
             border-color: var(--neon-blue);
             box-shadow: 0 0 10px rgba(15, 240, 252, 0.2);
         }
-        
+
         button {
             background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
             color: var(--dark-bg);
@@ -381,22 +386,29 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         button:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(15, 240, 252, 0.4);
         }
-        
+
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
-        
+
         .floating {
             animation: float 6s ease-in-out infinite;
         }
-        
+
 
         @media (max-width: 768px) {
             .download-cv {
@@ -404,28 +416,29 @@
                 margin-bottom: 20px;
                 text-align: center;
             }
-            
+
             .header-content {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .social-links {
                 justify-content: center;
             }
-            
+
             .nav-links {
                 flex-direction: column;
                 gap: 10px;
                 align-items: center;
             }
-            
+
             .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="download-cv">
@@ -440,18 +453,23 @@
                 <img src="profile.jpg" alt="Issam Harnoufi" class="profile-pic floating">
                 <div class="header-text">
                     <h1>ISSAM HARNOUFI</h1>
-                    <div class="title">Développeur <span>Full-Stack</span> | Spécialiste <span>JavaScript/PHP</span></div>
-                    <p>Je crée des solutions web innovantes avec des technologies modernes. Passionné par le développement d'applications performantes et esthétiques.</p>
+                    <div class="title">Développeur <span>Full-Stack</span> | Spécialiste <span>JavaScript/PHP</span>
+                    </div>
+                    <p>Je crée des solutions web innovantes avec des technologies modernes. Passionné par le
+                        développement d'applications performantes et esthétiques.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/issam-harnoufi-39b1b42b2/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Issam028" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.youtube.com/@trapvfx6507/videos" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/issam-harnoufi-39b1b42b2/" class="social-link"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Issam028" class="social-link" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@trapvfx6507/videos" class="social-link" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
                         <a href="mailto:issamharnoufi@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
         </header>
-        
+
         <nav>
             <div class="nav-links">
                 <a href="#about" class="nav-link">À Propos</a>
@@ -461,12 +479,14 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
         </nav>
-        
+
         <section id="about">
             <h2><i class="fas fa-user-astronaut"></i> À Propos</h2>
             <div class="card">
-                <p>Développeur Full-Stack passionné par la création de solutions innovantes. Je combine expertise technique et créativité pour développer des applications web performantes et intuitives.</p>
-                <p>Actuellement en Bachelor DEVOPS à l'EPSI Rennes, je recherche un stage pour mettre en pratique mes compétences en développement et contribuer à des projets ambitieux.</p>
+                <p>Développeur Full-Stack passionné par la création de solutions innovantes. Je combine expertise
+                    technique et créativité pour développer des applications web performantes et intuitives.</p>
+                <p>Actuellement en Bachelor DEVOPS à l'EPSI Rennes, je recherche un stage pour mettre en pratique mes
+                    compétences en développement et contribuer à des projets ambitieux.</p>
                 <div class="tags">
                     <span class="tag">React</span>
                     <span class="tag">Node.js</span>
@@ -476,10 +496,31 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="experience">
             <h2><i class="fas fa-rocket"></i> Expérience</h2>
-            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Développeur Web Full-Stack</div>
+                    <div class="card-date">Mai - Sept. 2025</div>
+                </div>
+                <div class="card-subtitle">Stage | We Love Customers</div>
+                <ul>
+                    <li>Développement de la plateforme « Boost My Shop » pour la gestion de plaques NFC</li>
+                    <li>Architecture complète : back-end Laravel, front-end React</li>
+                    <li>Fonctionnalités : scan, avis, notifications, statistiques, dashboard</li>
+                    <li>Création de diagrammes UML, logique métier et gestion des utilisateurs</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Laravel</span>
+                    <span class="tag">React</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">NFC</span>
+                    <span class="tag">UML</span>
+                </div>
+            </div>
+
+
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Développeur Back-End</div>
@@ -492,7 +533,8 @@
                     <li>Déploiement sur Render avec système d'e-mails automatisés (Nodemailer)</li>
                     <li>Collaboration avec l'équipe front-end pour une intégration optimale</li>
                 </ul>
-                <a href="https://hotelconnect.fr/" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                <a href="https://hotelconnect.fr/" class="project-link" target="_blank"
+                    style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
                     <i class="fas fa-external-link-alt"></i> Voir le projet
                 </a>
                 <div class="tags">
@@ -502,7 +544,7 @@
                     <span class="tag">IoT</span>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Développeur Front-End</div>
@@ -514,7 +556,8 @@
                     <li>Création de maquettes avec Figma</li>
                     <li>Montage vidéo du projet avec After Effects</li>
                 </ul>
-                <a href="https://issam028.github.io/online-MyDil/" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                <a href="https://issam028.github.io/online-MyDil/" class="project-link" target="_blank"
+                    style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
                     <i class="fas fa-external-link-alt"></i> Voir le projet
                 </a>
                 <div class="tags">
@@ -523,7 +566,7 @@
                     <span class="tag">Figma</span>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Développeur PHP/Laravel</div>
@@ -535,7 +578,7 @@
                     <li>Recueil des besoins et développement en autonomie</li>
                     <li>Technologies: Laravel, MySQL</li>
                 </ul>
-            
+
                 <div class="tags">
                     <span class="tag">PHP</span>
                     <span class="tag">Laravel</span>
@@ -557,7 +600,8 @@
                     <li>Utilisation de Postman pour les tests API et Figma pour le design</li>
                     <li>Gestion de projet avec Discord et Jira</li>
                 </ul>
-                <a href="https://istab-frontend1.vercel.app/" class="project-link" target="_blank" style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
+                <a href="https://istab-frontend1.vercel.app/" class="project-link" target="_blank"
+                    style="color: var(--neon-blue); text-decoration: none; display: inline-block; margin-top: 10px;">
                     <i class="fas fa-external-link-alt"></i> Voir le projet
                 </a>
                 <div class="tags">
@@ -569,10 +613,10 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="projects">
             <h2><i class="fas fa-code"></i> Projets Récents</h2>
-            
+
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Plateforme de communication ISTA</div>
@@ -590,10 +634,10 @@
                     <span class="tag">Postman</span>
                 </div>
             </div>
-            
+
 
         </section>
-        
+
         <section id="skills">
             <h2><i class="fas fa-cogs"></i> Compétences</h2>
             <div class="skills-grid">
@@ -607,7 +651,7 @@
                         <li>jQuery</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-server"></i> Back-End</h3>
                     <ul>
@@ -620,7 +664,7 @@
                         <li>API REST</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Bases de Données</h3>
                     <ul>
@@ -630,7 +674,7 @@
                         <li>PostgreSQL</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3><i class="fas fa-tools"></i> Outils & DevOps</h3>
                     <ul>
@@ -643,12 +687,16 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="contact">
             <h2><i class="fas fa-paper-plane"></i> Contact</h2>
             <div class="card">
-      
-                <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify>
+
+                <form class="contact-form" action="https://formsubmit.co/issamharnoufi@gmail.com" method="POST">
+                    <!-- FormSubmit hidden fields -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/merci.html">
+
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Votre nom" required>
                     </div>
@@ -656,18 +704,21 @@
                         <input type="email" name="email" placeholder="Votre email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" placeholder="Sujet">
+                        <input type="text" name="_subject" placeholder="Sujet"> <!-- Note: _subject for FormSubmit -->
                     </div>
                     <div class="form-group">
                         <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
                     </div>
-                    <button type="submit">Envoyer le message</button>
+
+                    <div class="form-button-container">
+                        <button type="submit">Envoyer le message</button>
+                    </div>
                 </form>
-                
                 <div style="margin-top: 30px; text-align: center;">
                     <p>Ou contactez-moi directement :</p>
                     <div style="margin-top: 15px;">
-                        <a href="mailto:issamharnoufi@gmail.com" style="color: var(--neon-blue); text-decoration: none;">
+                        <a href="mailto:issamharnoufi@gmail.com"
+                            style="color: var(--neon-blue); text-decoration: none;">
                             <i class="fas fa-envelope"></i> issamharnoufi@gmail.com
                         </a>
                     </div>
@@ -680,17 +731,17 @@
             </div>
         </section>
     </div>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
-                    
+
                     if (targetSection) {
                         window.scrollTo({
                             top: targetSection.offsetTop - 80,
@@ -699,15 +750,15 @@
                     }
                 });
             });
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 const scrollPosition = window.scrollY;
-                
+
                 document.querySelectorAll('section').forEach(section => {
                     const sectionTop = section.offsetTop - 100;
                     const sectionHeight = section.offsetHeight;
                     const sectionId = section.getAttribute('id');
-                    
+
                     if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                         document.querySelectorAll('.nav-link').forEach(link => {
                             link.classList.remove('active');
@@ -718,10 +769,10 @@
                     }
                 });
             });
-    
+
             const form = document.querySelector('.contact-form');
             if (form) {
-                form.addEventListener('submit', function() {
+                form.addEventListener('submit', function () {
                     setTimeout(() => {
                         window.location.href = '/merci.html';
                     }, 1500);
@@ -730,4 +781,5 @@
         });
     </script>
 </body>
-</html>
+
+</html
