@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Issam Harnoufi - Développeur Full-Stack</title>
+    <title>CV - Issam Harnoufi - Développeur Full-Stack & IA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -174,6 +174,8 @@
             font-style: italic;
             color: #6c757d;
             font-size: 0.75rem;
+            white-space: nowrap;
+            margin-left: 10px;
         }
 
         .tags {
@@ -248,6 +250,31 @@
             font-size: 0.8rem;
         }
 
+        .education-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .education-title-text {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .education-date {
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            margin-top: 2px;
+        }
+
+        .ai-tag {
+            background-color: #8a2be2;
+            color: white;
+        }
+
         @media print {
             body {
                 font-size: 9.5pt;
@@ -285,7 +312,7 @@
             <div class="profile-header">
                 <img src="profile.jpg" alt="Issam Harnoufi" class="profile-pic">
                 <h1>ISSAM HARNOUFI</h1>
-                <div class="title">Développeur Full-Stack</div>
+                <div class="title">Développeur Full-Stack & IA | Data Science</div>
             </div>
 
             <div class="contact-info">
@@ -341,6 +368,17 @@
                     </ul>
                 </div>
                 <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> IA & Data</h3>
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>Traitement NLP</li>
+                        <li>Analyse de sentiments</li>
+                        <li>TensorFlow/PyTorch</li>
+                        <li>Data Visualization</li>
+                        <li>API d'IA</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
                     <h3><i class="fas fa-tools"></i> Outils</h3>
                     <ul>
                         <li>Docker</li>
@@ -386,16 +424,14 @@
         <div class="right-column">
             <div class="section">
                 <h2><i class="fas fa-user-astronaut"></i> Profil</h2>
-                <p>Développeur Full-Stack passionné par la création de solutions innovantes. Expérience dans le
-                    développement d'applications web complètes avec JavaScript, PHP et leurs frameworks. À la recherche
-                    d'un stage pour mettre en pratique mes compétences et contribuer à des projets ambitieux.</p>
+                <p>Développeur Full-Stack passionné par la création de solutions innovantes, avec une spécialisation en intégration d'Intelligence Artificielle. Expérience dans le développement d'applications web complètes avec JavaScript, PHP et leurs frameworks, et implémentation de solutions IA pour l'analyse de données et l'automatisation. À la recherche d'opportunités pour mettre en pratique mes compétences et contribuer à des projets ambitieux.</p>
             </div>
 
             <div class="section">
                 <h2><i class="fas fa-laptop-code"></i> Expériences</h2>
                 <div class="job">
                     <div class="job-title">
-                        <span>Développeur web Full-Stack</span>
+                        <span>Développeur web Full-Stack & IA</span>
                         <span class="date">Mai 2025 – Sept. 2025</span>
                     </div>
                     <div class="job-company">Stage | We Love Customers Rennes</div>
@@ -404,6 +440,8 @@
                         <li>Création d'une architecture complète : back-end Laravel + front-end React</li>
                         <li>Mise en place de la logique de scan, avis, notifications et statistiques</li>
                         <li>Conception de diagrammes UML et base de données relationnelle</li>
+                        <li>Intégration d'un système d'IA pour l'analyse automatique des avis clients</li>
+                        <li>Implémentation d'un assistant IA générant des réponses personnalisées aux avis</li>
                     </ul>
                     <div class="tags">
                         <span class="tag">Laravel</span>
@@ -411,6 +449,7 @@
                         <span class="tag">MySQL</span>
                         <span class="tag">UML</span>
                         <span class="tag">NFC</span>
+                        <span class="tag ai-tag">IA</span>
                     </div>
                 </div>
                 <div class="job">
@@ -430,84 +469,114 @@
                         <span class="tag"> MySQL</span>
                     </div>
                 </div>
-            
-        </div>
-        <div class="job">
-            <div class="job-title">
-                <span>Développeur Back-End</span>
-                <span class="date">Janv. 2025–Sept 2025</span>
-            </div>
-            <div class="job-company">HotelConnect | Projet innov mind</div>
-            <ul>
-                <li>Conception d'une API REST (Node.js/NestJS) pour la gestion de réservations</li>
-                <li>Intégration de capteurs IoT (Arduino) via requêtes HTTP</li>
-                <li>Déploiement sur Render avec système d'e-mails automatisés</li>
-            </ul>
-            <a href="https://hotelconnect.fr/" class="project-link"><i class="fas fa-external-link-alt"></i> Voir le
-                projet</a>
-            <div class="tags">
-                <span class="tag">Node.js</span>
-                <span class="tag">NestJS</span>
-                <span class="tag">IoT</span>
-                <span class="tag">MongoDB</span>
-            </div>
-        </div>
 
-        
+                <div class="job">
+                    <div class="job-title">
+                        <span>Développeur Back-End</span>
+                        <span class="date">Janv. 2023–Juin 2023</span>
+                    </div>
+                    <div class="job-company">HotelConnect | Projet innov mind</div>
+                    <ul>
+                        <li>Conception d'une API REST (Node.js/NestJS) pour la gestion de réservations</li>
+                        <li>Intégration de capteurs IoT (Arduino) via requêtes HTTP</li>
+                        <li>Déploiement sur Render avec système d'e-mails automatisés</li>
+                    </ul>
+                    <a href="https://hotelconnect.fr/" class="project-link"><i class="fas fa-external-link-alt"></i> Voir le
+                        projet</a>
+                    <div class="tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">NestJS</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
 
-        <div class="job">
-            <div class="job-title">
-                <span>Développeur Full-Stack</span>
-                <span class="date">Janv. - Juin 2023</span>
+                <div class="job">
+                    <div class="job-title">
+                        <span>Développeur Full-Stack</span>
+                        <span class="date">Janv. - Juin 2023</span>
+                    </div>
+                    <div class="job-company">Projet de fin de formation | OFPPT ISTA Berkane</div>
+                    <ul>
+                        <li>Plateforme de communication pour l'ISTA Berkane</li>
+                        <li>Front-end en React.js et back-end en Laravel</li>
+                        <li>Collaboration entre administration et formateurs</li>
+                    </ul>
+                    <a href="https://istab-frontend1.vercel.app/" class="project-link"><i
+                            class="fas fa-external-link-alt"></i>
+                        Voir le projet</a>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Postman</span>
+                    </div>
+                </div>
             </div>
-            <div class="job-company">Projet de fin de formation | OFPPT ISTA Berkane</div>
-            <ul>
-                <li>Plateforme de communication pour l'ISTA Berkane</li>
-                <li>Front-end en React.js et back-end en Laravel</li>
-                <li>Collaboration entre administration et formateurs</li>
-            </ul>
-            <a href="https://istab-frontend1.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i>
-                Voir le projet</a>
-            <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">Laravel</span>
-                <span class="tag">Postman</span>
+
+            <div class="section">
+                <h2><i class="fas fa-robot"></i> Projets IA</h2>
+                <div class="job">
+                    <div class="job-title">
+                        <span>Système d'analyse d'avis clients par IA</span>
+                        <span class="date">2025</span>
+                    </div>
+                    <div class="job-company">We Love Customers</div>
+                    <ul>
+                        <li>Développement d'un algorithme de classification des sentiments (positif, neutre, négatif)</li>
+                        <li>Implémentation d'un système de détection des thèmes principaux dans les avis</li>
+                        <li>Création d'un tableau de bord de monitoring avec alertes automatiques</li>
+                        <li>Intégration d'un assistant IA générant des réponses contextuelles aux avis</li>
+                        <li>Analyse en temps réel avec précision de 94.3% sur 1247 avis traités</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">React</span>
+                        <span class="tag">API REST</span>
+                        <span class="tag ai-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
+                <div class="education">
+                    <div class="education-title-container">
+                        <div class="education-title-text">Expert en Informatique et Systèmes d'Information</div>
+                        <div class="education-date">2025–2027</div>
+                    </div>
+                    <div>EPSI Rennes</div>
+                </div>
+                <div class="education">
+                    <div class="education-title-container">
+                        <div class="education-title-text">Bachelor Développeur en Intelligence Artificielle</div>
+                        <div class="education-date">2024–2025</div>
+                    </div>
+                    <div>EPSI Rennes | Spécialisation Data Science</div>
+                </div>
+                <div class="education">
+                    <div class="education-title-container">
+                        <div class="education-title-text">Programme Grande École (1ère année)</div>
+                        <div class="education-date">2023–2024</div>
+                    </div>
+                    <div>EPITECH Rennes</div>
+                </div>
+                <div class="education">
+                    <div class="education-title-container">
+                        <div class="education-title-text">Diplôme de Technicien Spécialisé (Bac+2)</div>
+                        <div class="education-date">2021–2023</div>
+                    </div>
+                    <div>OFPPT ISTA Berkane (Maroc)</div>
+                </div>
+                <div class="education">
+                    <div class="education-title-container">
+                        <div class="education-title-text">Baccalauréat Sciences Physiques</div>
+                        <div class="education-date">2021</div>
+                    </div>
+                    <div>Lycée Laymoune (Maroc)</div>
+                </div>
             </div>
         </div>
-
-
-        <div class="section">
-            <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
-            <div class="education">
-                <div class="education-title">
-                    <span>Bachelor DEVOPS - Fullstack (Bac+3)</span>
-                    <span class="date">2024–2025</span>
-                </div>
-                <div>EPSI Rennes</div>
-            </div>
-            <div class="education">
-                <div class="education-title">
-                    <span>Programme Grande École (1ère année)</span>
-                    <span class="date">2023–2024</span>
-                </div>
-                <div>EPITECH Rennes</div>
-            </div>
-            <div class="education">
-                <div class="education-title">
-                    <span>Diplôme de Technicien Spécialisé (Bac+2)</span>
-                    <span class="date">2021–2023</span>
-                </div>
-                <div>OFPPT ISTA Berkane (Maroc)</div>
-            </div>
-            <div class="education">
-                <div class="education-title">
-                    <span>Baccalauréat Sciences Physiques</span>
-                    <span class="date">2021</span>
-                </div>
-                <div>Lycée Laymoune (Maroc)</div>
-            </div>
-        </div>
-    </div>
     </div>
 </body>
 
