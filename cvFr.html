@@ -2,16 +2,15 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV - Issam Harnoufi - Développeur Full-Stack & IA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         @page {
             size: A4;
@@ -23,9 +22,7 @@
             line-height: 1.3;
             color: #2b2d42;
             width: 210mm;
-            height: auto;
             margin: 0 auto;
-            padding: 0;
             font-size: 10pt;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
@@ -39,20 +36,20 @@
 
         .left-column {
             background-color: #1a1c2e;
-            color: white;
+            color: #fff;
             padding: 15px;
         }
 
         .right-column {
             padding: 15px;
-            background-color: white;
+            background-color: #fff;
         }
 
         .profile-header {
             text-align: center;
             margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(58, 134, 255, 0.3);
+            border-bottom: 1px solid rgba(58, 134, 255, .3);
         }
 
         .profile-pic {
@@ -68,18 +65,18 @@
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 1.3rem;
             margin: 0;
-            letter-spacing: 0.5px;
+            letter-spacing: .5px;
         }
 
         .title {
-            font-size: 0.8rem;
+            font-size: .8rem;
             color: #e9ecef;
-            margin: 3px 0 0 0;
+            margin-top: 3px;
         }
 
         .left-column h2 {
             font-size: 1rem;
-            margin: 20px 0 10px 0;
+            margin: 20px 0 10px;
             color: #3a86ff;
             display: flex;
             align-items: center;
@@ -95,7 +92,7 @@
             align-items: center;
             gap: 6px;
             margin-bottom: 8px;
-            font-size: 0.8rem;
+            font-size: .8rem;
         }
 
         .contact-item i {
@@ -105,7 +102,7 @@
 
         .right-column h2 {
             font-size: 1.1rem;
-            margin: 15px 0 10px 0;
+            margin: 15px 0 10px;
             color: #2b2d42;
             display: flex;
             align-items: center;
@@ -142,14 +139,14 @@
             font-weight: 600;
             display: flex;
             justify-content: space-between;
-            font-size: 0.9rem;
+            font-size: .9rem;
         }
 
         .job-company {
             font-weight: 500;
             color: #3a86ff;
-            margin: 2px 0 5px 0;
-            font-size: 0.85rem;
+            margin: 2px 0 5px;
+            font-size: .85rem;
         }
 
         ul {
@@ -159,21 +156,13 @@
 
         li {
             margin-bottom: 4px;
-            font-size: 0.85rem;
-            position: relative;
-        }
-
-        li::before {
-            position: absolute;
-            left: -14px;
-            color: #3a86ff;
-            font-size: 0.8rem;
+            font-size: .85rem;
         }
 
         .date {
             font-style: italic;
             color: #6c757d;
-            font-size: 0.75rem;
+            font-size: .75rem;
             white-space: nowrap;
             margin-left: 10px;
         }
@@ -190,7 +179,7 @@
             color: #2b2d42;
             padding: 2px 8px;
             border-radius: 20px;
-            font-size: 0.65rem;
+            font-size: .65rem;
             font-weight: 600;
         }
 
@@ -201,7 +190,7 @@
             color: #3a86ff;
             text-decoration: none;
             margin-top: 4px;
-            font-size: 0.75rem;
+            font-size: .75rem;
             font-weight: 500;
         }
 
@@ -215,7 +204,7 @@
         }
 
         .skill-category h3 {
-            font-size: 0.85rem;
+            font-size: .85rem;
             margin-bottom: 6px;
             color: #e9ecef;
             display: flex;
@@ -234,7 +223,7 @@
         .skill-category li {
             margin: 0;
             padding: 0;
-            font-size: 0.75rem;
+            font-size: .75rem;
         }
 
         .languages {
@@ -247,7 +236,7 @@
             display: flex;
             align-items: center;
             gap: 5px;
-            font-size: 0.8rem;
+            font-size: .8rem;
         }
 
         .education-title-container {
@@ -265,14 +254,14 @@
         .education-date {
             font-style: italic;
             color: #6c757d;
-            font-size: 0.75rem;
+            font-size: .75rem;
             white-space: nowrap;
             margin-top: 2px;
         }
 
         .ai-tag {
             background-color: #8a2be2;
-            color: white;
+            color: #fff;
         }
 
         @media print {
@@ -285,10 +274,7 @@
                 grid-template-columns: 32% 68%;
             }
 
-            .left-column {
-                padding: 12px;
-            }
-
+            .left-column,
             .right-column {
                 padding: 12px;
             }
@@ -308,38 +294,26 @@
 
 <body>
     <div class="page">
+        <!-- Colonne gauche -->
         <div class="left-column">
             <div class="profile-header">
-                <img src="profile.jpg" alt="Issam Harnoufi" class="profile-pic">
+                <img src="profile.jpg" alt="Issam Harnoufi" class="profile-pic" />
                 <h1>ISSAM HARNOUFI</h1>
                 <div class="title">Développeur Full-Stack & IA | Data Science</div>
             </div>
 
             <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>2 Rue Robert Capa, 35690 Acigné</span>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>2 Rue Robert Capa, 35690
+                        Acigné</span></div>
+                <div class="contact-item"><i class="fas fa-envelope"></i><span>issamharnoufi@gmail.com</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+33 7 82 42 91 56</span></div>
+                <div class="contact-item"><i class="fas fa-globe"></i><a
+                        href="https://harnoufiissamportfolio.netlify.app/" style="color:inherit;">Portfolio</a></div>
+                <div class="contact-item"><i class="fab fa-linkedin"></i><a
+                        href="https://www.linkedin.com/in/issam-harnoufi-39b1b42b2/" style="color:inherit;">LinkedIn</a>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>issamharnoufi@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+33 7 82 42 91 56</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <a href="https://harnoufiissamportfolio.netlify.app/" style="color:inherit;">Portfolio </a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/issam-harnoufi-39b1b42b2/" style="color:inherit;">LinkedIn</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/Issam028" style="color:inherit;">GitHub</a>
-                </div>
+                <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/Issam028"
+                        style="color:inherit;">GitHub</a></div>
             </div>
 
             <h2><i class="fas fa-microchip"></i> Compétences</h2>
@@ -371,37 +345,19 @@
                     <h3><i class="fas fa-brain"></i> IA & Data</h3>
                     <ul>
                         <li>Machine Learning</li>
-                        <li>Traitement NLP</li>
-                        <li>Analyse de sentiments</li>
-                        <li>TensorFlow/PyTorch</li>
+                        <li>Traitement ETL</li>
+                        <li>Pandas (Python)</li>
                         <li>Data Visualization</li>
                         <li>API d'IA</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Outils</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Git</li>
-                        <li>Jira</li>
-                        <li>Postman</li>
-                        <li>Figma</li>
-                        <li>Agile</li>
                     </ul>
                 </div>
             </div>
 
             <h2><i class="fas fa-language"></i> Langues</h2>
             <div class="languages">
-                <div class="language">
-                    <span>Français : Courant</span>
-                </div>
-                <div class="language">
-                    <span>Anglais : Courant</span>
-                </div>
-                <div class="language">
-                    <span>Arabe : Maternelle</span>
-                </div>
+                <div class="language"><span>Français : Courant</span></div>
+                <div class="language"><span>Anglais : Courant</span></div>
+                <div class="language"><span>Arabe : Maternelle</span></div>
             </div>
 
             <h2><i class="fas fa-brain"></i> Soft Skills</h2>
@@ -409,7 +365,7 @@
                 <li>Collaboration</li>
                 <li>Autonomie</li>
                 <li>Créativité</li>
-                <li>Résolution problèmes</li>
+                <li>Résolution de problèmes</li>
             </ul>
 
             <h2><i class="fas fa-rocket"></i> Centres d'intérêt</h2>
@@ -421,14 +377,20 @@
             </ul>
         </div>
 
+        <!-- Colonne droite -->
         <div class="right-column">
             <div class="section">
                 <h2><i class="fas fa-user-astronaut"></i> Profil</h2>
-                <p>Développeur Full-Stack passionné par la création de solutions innovantes, avec une spécialisation en intégration d'Intelligence Artificielle. Expérience dans le développement d'applications web complètes avec JavaScript, PHP et leurs frameworks, et implémentation de solutions IA pour l'analyse de données et l'automatisation. À la recherche d'opportunités pour mettre en pratique mes compétences et contribuer à des projets ambitieux.</p>
+                <p>Développeur web Full-Stack passionné, je conçois et mets en œuvre des applications modernes alliant
+                    front-end et back-end. Curieux et rigoureux, j’aime optimiser les flux de données, intégrer
+                    l’intelligence artificielle et automatiser les processus pour gagner en efficacité. Mon objectif est
+                    de créer des solutions fiables et utiles qui répondent réellement aux besoins des utilisateurs.</p>
+
             </div>
 
             <div class="section">
                 <h2><i class="fas fa-laptop-code"></i> Expériences</h2>
+
                 <div class="job">
                     <div class="job-title">
                         <span>Développeur web Full-Stack & IA</span>
@@ -436,12 +398,13 @@
                     </div>
                     <div class="job-company">Stage | We Love Customers Rennes</div>
                     <ul>
-                        <li>Développement de la plateforme « Boost My Shop » pour la gestion de plaques NFC</li>
-                        <li>Création d'une architecture complète : back-end Laravel + front-end React</li>
+                        <li>Développement de la plateforme « Boost My Shop » pour la gestion de plaques NFC et QR codes
+                        </li>
+                        <li>Architecture complète : back-end Laravel + front-end React</li>
                         <li>Mise en place de la logique de scan, avis, notifications et statistiques</li>
                         <li>Conception de diagrammes UML et base de données relationnelle</li>
-                        <li>Intégration d'un système d'IA pour l'analyse automatique des avis clients</li>
-                        <li>Implémentation d'un assistant IA générant des réponses personnalisées aux avis</li>
+                        <li>Intégration d’un système d’IA pour l’analyse automatique des avis clients</li>
+                        <li>Assistant IA pour générer des réponses personnalisées</li>
                     </ul>
                     <div class="tags">
                         <span class="tag">Laravel</span>
@@ -449,40 +412,26 @@
                         <span class="tag">MySQL</span>
                         <span class="tag">UML</span>
                         <span class="tag">NFC</span>
-                        <span class="tag ai-tag">IA</span>
-                    </div>
-                </div>
-                <div class="job">
-                    <div class="job-title">
-                        <span>Développeur Back-End</span>
-                        <span class="date">Mars - Mai 2023</span>
-                    </div>
-                    <div class="job-company">Stage | Marjane (grande distribution) Berkane</div>
-                    <ul>
-                        <li>Application web de gestion des demandes employés</li>
-                        <li>Recueil des besoins et développement en autonomie</li>
-                        <li>Technologies: Laravel, MySQL</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">Laravel</span>
-                        <span class="tag"> MySQL</span>
+                        <span class="tag">QR Code</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">Machine Learning</span>
                     </div>
                 </div>
 
                 <div class="job">
                     <div class="job-title">
                         <span>Développeur Back-End</span>
-                        <span class="date">Janv. 2023–Juin 2023</span>
+                        <span class="date">Janv. 2025 – Aujourd’hui</span>
                     </div>
-                    <div class="job-company">HotelConnect | Projet innov mind</div>
+                    <div class="job-company">HotelConnect | Projet Innov Mind</div>
                     <ul>
-                        <li>Conception d'une API REST (Node.js/NestJS) pour la gestion de réservations</li>
+                        <li>API REST (Node.js/NestJS) pour la gestion de réservations</li>
                         <li>Intégration de capteurs IoT (Arduino) via requêtes HTTP</li>
-                        <li>Déploiement sur Render avec système d'e-mails automatisés</li>
+                        <li>Déploiement sur Render avec système d’e-mails automatisés</li>
                     </ul>
-                    <a href="https://hotelconnect.fr/" class="project-link"><i class="fas fa-external-link-alt"></i> Voir le
-                        projet</a>
+                    <a href="https://hotelconnect.fr/" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Voir le projet
+                    </a>
                     <div class="tags">
                         <span class="tag">Node.js</span>
                         <span class="tag">NestJS</span>
@@ -493,47 +442,40 @@
 
                 <div class="job">
                     <div class="job-title">
+                        <span>Développeur Back-End</span>
+                        <span class="date">Mars – Mai 2023</span>
+                    </div>
+                    <div class="job-company">Stage | Marjane (grande distribution) Berkane</div>
+                    <ul>
+                        <li>Application web de gestion des demandes employés</li>
+                        <li>Recueil des besoins et développement en autonomie</li>
+                        <li>Technologies : Laravel, MySQL</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Laravel</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">
                         <span>Développeur Full-Stack</span>
-                        <span class="date">Janv. - Juin 2023</span>
+                        <span class="date">Janv. – Juin 2023</span>
                     </div>
                     <div class="job-company">Projet de fin de formation | OFPPT ISTA Berkane</div>
                     <ul>
-                        <li>Plateforme de communication pour l'ISTA Berkane</li>
+                        <li>Plateforme de communication pour l’ISTA Berkane</li>
                         <li>Front-end en React.js et back-end en Laravel</li>
                         <li>Collaboration entre administration et formateurs</li>
                     </ul>
-                    <a href="https://istab-frontend1.vercel.app/" class="project-link"><i
-                            class="fas fa-external-link-alt"></i>
-                        Voir le projet</a>
+                    <a href="https://istab-frontend1.vercel.app/" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Voir le projet
+                    </a>
                     <div class="tags">
                         <span class="tag">React</span>
                         <span class="tag">Laravel</span>
                         <span class="tag">Postman</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2><i class="fas fa-robot"></i> Projets IA</h2>
-                <div class="job">
-                    <div class="job-title">
-                        <span>Système d'analyse d'avis clients par IA</span>
-                        <span class="date">2025</span>
-                    </div>
-                    <div class="job-company">We Love Customers</div>
-                    <ul>
-                        <li>Développement d'un algorithme de classification des sentiments (positif, neutre, négatif)</li>
-                        <li>Implémentation d'un système de détection des thèmes principaux dans les avis</li>
-                        <li>Création d'un tableau de bord de monitoring avec alertes automatiques</li>
-                        <li>Intégration d'un assistant IA générant des réponses contextuelles aux avis</li>
-                        <li>Analyse en temps réel avec précision de 94.3% sur 1247 avis traités</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">React</span>
-                        <span class="tag">API REST</span>
-                        <span class="tag ai-tag">Machine Learning</span>
                     </div>
                 </div>
             </div>
