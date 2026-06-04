@@ -871,6 +871,7 @@
             overflow: hidden;
             padding: 0 60px;
         }
+
         .projects-grid {
             display: flex;
             gap: 30px;
@@ -880,13 +881,16 @@
             -ms-overflow-style: none;
             padding: 20px 0;
         }
+
         .projects-grid::-webkit-scrollbar {
             display: none;
         }
+
         .projects-grid .card-3d-container {
             flex: 0 0 400px;
             min-width: 400px;
         }
+
         .scroll-btn {
             position: absolute;
             top: 50%;
@@ -905,25 +909,31 @@
             justify-content: center;
             clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0 50%);
         }
+
         .scroll-btn:hover {
             background: var(--neon-cyan);
             color: var(--bg-dark);
             box-shadow: 0 0 20px var(--neon-cyan);
         }
+
         .scroll-btn.left {
             left: 0;
         }
+
         .scroll-btn.right {
             right: 0;
         }
+
         @media (max-width: 768px) {
             .projects-wrapper {
                 padding: 0 10px;
             }
+
             .projects-grid .card-3d-container {
                 flex: 0 0 300px;
                 min-width: 300px;
             }
+
             .scroll-btn {
                 width: 40px;
                 height: 40px;
@@ -1332,7 +1342,8 @@
 
         /* --- Project Background Images --- */
         .card-cyber {
-            overflow: hidden; /* Ensures image stays inside */
+            overflow: hidden;
+            /* Ensures image stays inside */
         }
 
         .project-bg-img {
@@ -1345,17 +1356,17 @@
             background-position: center;
             opacity: 0.15;
             z-index: 0;
-            
+
             /* Gradient fade mask - Soft edge */
             mask-image: linear-gradient(to right, transparent 0%, black 60%);
             -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);
-            
+
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            
+
             /* Blue-ish holographic tint for idle state */
             filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(200%) brightness(0.7) contrast(1.2);
             mix-blend-mode: hard-light;
-            
+
             /* Angled cut */
             clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
         }
@@ -1368,34 +1379,33 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(0, 243, 255, 0.1) 4px
-            );
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 243, 255, 0.1) 4px);
             background-size: 100% 4px;
             pointer-events: none;
         }
 
         .card-cyber:hover .project-bg-img {
             opacity: 0.8;
-            width: 85%; /* Expands significantly */
-            
+            width: 85%;
+            /* Expands significantly */
+
             /* Full color reveal */
             filter: grayscale(0%) contrast(1.1) brightness(1.1);
             mix-blend-mode: normal;
-            
+
             transform: scale(1.05);
             /* Shape shifts slightly */
-            clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%); 
-            
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%);
+
             mask-image: linear-gradient(to right, transparent 0%, black 40%);
             -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
         }
 
         /* Ensure text stays readable on top */
-        .card-cyber > *:not(.project-bg-img) {
+        .card-cyber>*:not(.project-bg-img) {
             position: relative;
             z-index: 2;
         }
@@ -1644,269 +1654,277 @@
 
 
 
-                <div class="card-3d-container reveal">
+                    <div class="card-3d-container reveal">
 
-                    <div class="card-cyber" style="height: 100%;">
+                        <div class="card-cyber" style="height: 100%;">
 
-                        <div class="project-bg-img" style="background-image: url('images/Aim%20trainer%202d.png');"></div>
+                            <div class="project-bg-img" style="background-image: url('images/Aim%20trainer%202d.png');">
+                            </div>
 
-                        <div
-                            style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
+                            <div
+                                style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
 
-                            <i class="fas fa-gamepad"></i>
+                                <i class="fas fa-gamepad"></i>
+
+                            </div>
+
+                            <h3 class="highlight">Aim Trainer 2D</h3>
+
+                            <p
+                                style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+                                Projet Personnel | 2025</p>
+
+                            <p>Entraîneur de visée immersif style Black Ops 3.</p>
+
+                            <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
+
+                                <li>Modes de jeu variés (Classique, Rapide, Précision).</li>
+
+                                <li>Système d'armes avec tir automatique.</li>
+
+                                <li>Interface futuriste avec animations fluides.</li>
+
+                            </ul>
+
+                            <div class="project-tags">
+
+                                <span class="tech-tag">React</span>
+
+                                <span class="tech-tag">Vite</span>
+
+                                <span class="tech-tag">Framer Motion</span>
+
+                            </div>
+
+                            <a href="https://graceful-marshmallow-dbe3aa.netlify.app/" target="_blank"
+                                class="btn-cyber secondary"
+                                style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
+
+                                Voir Projet
+
+                            </a>
 
                         </div>
 
-                        <h3 class="highlight">Aim Trainer 2D</h3>
+                    </div>
+                    <div class="card-3d-container reveal">
 
-                        <p
-                            style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
-                            Projet Personnel | 2025</p>
+                        <div class="card-cyber" style="height: 100%;">
 
-                        <p>Entraîneur de visée immersif style Black Ops 3.</p>
+                            <div class="project-bg-img"
+                                style="background-image: linear-gradient(135deg, rgba(0, 243, 255, 0.35), rgba(255, 0, 85, 0.25)), url('images/Smart%20Tracker.png');">
+                            </div>
 
-                        <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
+                            <div
+                                style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
 
-                            <li>Modes de jeu variés (Classique, Rapide, Précision).</li>
+                                <i class="fas fa-briefcase"></i>
 
-                            <li>Système d'armes avec tir automatique.</li>
+                            </div>
 
-                            <li>Interface futuriste avec animations fluides.</li>
+                            <h3 class="highlight">Smart Job Tracker</h3>
 
-                        </ul>
+                            <p
+                                style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+                                Projet Vue.js | 2026</p>
 
-                        <div class="project-tags">
+                            <p>Dashboard moderne pour suivre les candidatures de stage, alternance et emploi.</p>
 
-                            <span class="tech-tag">React</span>
+                            <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
 
-                            <span class="tech-tag">Vite</span>
+                                <li>Kanban interactif avec 5 statuts de candidature.</li>
 
-                            <span class="tech-tag">Framer Motion</span>
+                                <li>Recherche, filtres et statistiques en temps r&eacute;el.</li>
+
+                                <li>Sauvegarde locale avec LocalStorage, sans backend.</li>
+
+                            </ul>
+
+                            <div class="project-tags">
+
+                                <span class="tech-tag">Vue 3</span>
+
+                                <span class="tech-tag">Vite</span>
+
+                                <span class="tech-tag">LocalStorage</span>
+
+                            </div>
+
+                            <a href="https://issam028.github.io/MSPR-TPRE814-Application-IoT-Stock/" target="_blank"
+                                class="btn-cyber secondary"
+                                style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
+
+                                Voir Projet
+
+                            </a>
 
                         </div>
-
-                        <a href="https://graceful-marshmallow-dbe3aa.netlify.app/" target="_blank" class="btn-cyber secondary"
-                            style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
-
-                            Voir Projet
-
-                        </a>
 
                     </div>
 
-                </div>
 
 
 
-                <div class="card-3d-container reveal">
 
-                    <div class="card-cyber" style="height: 100%;">
+                    <div class="card-3d-container reveal">
 
-                        <div class="project-bg-img" style="background-image: url('images/HotelConnect.png');"></div>
+                        <div class="card-cyber" style="height: 100%;">
 
-                        <div
-                            style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
+                            <div class="project-bg-img" style="background-image: url('images/HotelConnect.png');"></div>
 
-                            <i class="fas fa-star"></i>
+                            <div
+                                style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
+
+                                <i class="fas fa-star"></i>
+
+                            </div>
+
+                            <h3 class="highlight">HotelConnect</h3>
+
+                            <p
+                                style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+                                Projet Innov Mind | 2025</p>
+
+                            <p>API REST robuste pour la gestion hôtelière connectée.</p>
+
+                            <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
+
+                                <li>Backend NestJS/Node.js performant.</li>
+
+                                <li>Communication IoT avec capteurs Arduino.</li>
+
+                                <li>Déploiement Cloud (Render).</li>
+
+                            </ul>
+
+                            <div class="project-tags">
+
+                                <span class="tech-tag">Node.js</span>
+
+                                <span class="tech-tag">NestJS</span>
+
+                                <span class="tech-tag">IoT</span>
+
+                                <span class="tech-tag">MongoDB</span>
+
+                            </div>
+
+                            <a href="https://hotelconnect.fr/" target="_blank" class="btn-cyber secondary"
+                                style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
+
+                                Voir Projet
+
+                            </a>
 
                         </div>
-
-                        <h3 class="highlight">HotelConnect</h3>
-
-                        <p
-                            style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
-                            Projet Innov Mind | 2025</p>
-
-                        <p>API REST robuste pour la gestion hôtelière connectée.</p>
-
-                        <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
-
-                            <li>Backend NestJS/Node.js performant.</li>
-
-                            <li>Communication IoT avec capteurs Arduino.</li>
-
-                            <li>Déploiement Cloud (Render).</li>
-
-                        </ul>
-
-                        <div class="project-tags">
-
-                            <span class="tech-tag">Node.js</span>
-
-                            <span class="tech-tag">NestJS</span>
-
-                            <span class="tech-tag">IoT</span>
-
-                            <span class="tech-tag">MongoDB</span>
-
-                        </div>
-
-                        <a href="https://hotelconnect.fr/" target="_blank" class="btn-cyber secondary"
-                            style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
-
-                            Voir Projet
-
-                        </a>
 
                     </div>
 
-                </div>
 
 
+                    <div class="card-3d-container reveal">
 
-                <div class="card-3d-container reveal">
+                        <div class="card-cyber" style="height: 100%;">
 
-                    <div class="card-cyber" style="height: 100%;">
+                            <div class="project-bg-img"
+                                style="background-image: url('images/Gestion%20de%20Stock.png');"></div>
 
-                        <div class="project-bg-img" style="background-image: url('images/Gestion%20de%20Stock.png');"></div>
+                            <div
+                                style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
 
-                        <div
-                            style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
+                                <i class="fas fa-trophy"></i>
 
-                            <i class="fas fa-trophy"></i>
+                            </div>
+
+                            <h3 class="highlight">Gestion de Stock</h3>
+
+                            <p
+                                style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+                                Workshop Créactimnov (Gagnant)</p>
+
+                            <p>Application web UX/UI centrée utilisateur.</p>
+
+                            <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
+
+                                <li>Prototypage Figma avancé.</li>
+
+                                <li>Frontend JS vanilla optimisé.</li>
+
+                                <li>Présentation vidéo (After Effects).</li>
+
+                            </ul>
+
+                            <div class="project-tags">
+
+                                <span class="tech-tag">JS</span>
+
+                                <span class="tech-tag">Figma</span>
+
+                                <span class="tech-tag">UX/UI</span>
+
+                            </div>
+
+                            <a href="https://issam028.github.io/online-MyDil/" target="_blank"
+                                class="btn-cyber secondary"
+                                style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
+
+                                Voir Projet
+
+                            </a>
 
                         </div>
-
-                        <h3 class="highlight">Gestion de Stock</h3>
-
-                        <p
-                            style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
-                            Workshop Créactimnov (Gagnant)</p>
-
-                        <p>Application web UX/UI centrée utilisateur.</p>
-
-                        <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
-
-                            <li>Prototypage Figma avancé.</li>
-
-                            <li>Frontend JS vanilla optimisé.</li>
-
-                            <li>Présentation vidéo (After Effects).</li>
-
-                        </ul>
-
-                        <div class="project-tags">
-
-                            <span class="tech-tag">JS</span>
-
-                            <span class="tech-tag">Figma</span>
-
-                            <span class="tech-tag">UX/UI</span>
-
-                        </div>
-
-                        <a href="https://issam028.github.io/online-MyDil/" target="_blank" class="btn-cyber secondary"
-                            style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
-
-                            Voir Projet
-
-                        </a>
 
                     </div>
 
-                </div>
 
 
+                    <div class="card-3d-container reveal">
 
-                <div class="card-3d-container reveal">
+                        <div class="card-cyber" style="height: 100%;">
 
-                    <div class="card-cyber" style="height: 100%;">
+                            <div class="project-bg-img"
+                                style="background-image: url('images/Com%27%20Platform%20ISTA.png');"></div>
 
-                        <div class="project-bg-img" style="background-image: url('images/Com%27%20Platform%20ISTA.png');"></div>
+                            <h3 class="highlight">Com' Platform ISTA</h3>
 
-                        <h3 class="highlight">Com' Platform ISTA</h3>
+                            <p
+                                style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+                                Projet Fin d'Études</p>
 
-                        <p
-                            style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
-                            Projet Fin d'Études</p>
+                            <p>Plateforme centralisant la communication académique.</p>
 
-                        <p>Plateforme centralisant la communication académique.</p>
+                            <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
 
-                        <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
+                                <li>Synchronisation Admin/Profs/Élèves.</li>
 
-                            <li>Synchronisation Admin/Profs/Élèves.</li>
+                                <li>Gestion de projet AGILE (Jira).</li>
 
-                            <li>Gestion de projet AGILE (Jira).</li>
+                                <li>API Testing via Postman.</li>
 
-                            <li>API Testing via Postman.</li>
+                            </ul>
 
-                        </ul>
+                            <div class="project-tags">
 
-                        <div class="project-tags">
+                                <span class="tech-tag">React</span>
 
-                            <span class="tech-tag">React</span>
+                                <span class="tech-tag">Laravel</span>
 
-                            <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Agile</span>
 
-                            <span class="tech-tag">Agile</span>
+                            </div>
+
+                            <a href="https://istab-frontend1.vercel.app/" target="_blank" class="btn-cyber secondary"
+                                style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
+
+                                Voir Projet
+
+                            </a>
 
                         </div>
-
-                        <a href="https://istab-frontend1.vercel.app/" target="_blank" class="btn-cyber secondary"
-                            style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
-
-                            Voir Projet
-
-                        </a>
 
                     </div>
 
-                </div>
 
-
-
-                <div class="card-3d-container reveal">
-
-                    <div class="card-cyber" style="height: 100%;">
-
-                        <div class="project-bg-img"
-                            style="background-image: linear-gradient(135deg, rgba(0, 243, 255, 0.35), rgba(255, 0, 85, 0.25)), url('images/Smart%20Tracker.png');"></div>
-
-                        <div
-                            style="position: absolute; top: 10px; right: 10px; color: var(--neon-yellow); font-size: 1.2rem;">
-
-                            <i class="fas fa-briefcase"></i>
-
-                        </div>
-
-                        <h3 class="highlight">Smart Job Tracker</h3>
-
-                        <p
-                            style="font-family: var(--font-code); color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
-                            Projet Vue.js | 2026</p>
-
-                        <p>Dashboard moderne pour suivre les candidatures de stage, alternance et emploi.</p>
-
-                        <ul style="margin: 15px 0; padding-left: 20px; font-size: 0.95rem;">
-
-                            <li>Kanban interactif avec 5 statuts de candidature.</li>
-
-                            <li>Recherche, filtres et statistiques en temps r&eacute;el.</li>
-
-                            <li>Sauvegarde locale avec LocalStorage, sans backend.</li>
-
-                        </ul>
-
-                        <div class="project-tags">
-
-                            <span class="tech-tag">Vue 3</span>
-
-                            <span class="tech-tag">Vite</span>
-
-                            <span class="tech-tag">LocalStorage</span>
-
-                        </div>
-
-                        <a href="https://issam028.github.io/MSPR-TPRE814-Application-IoT-Stock/" target="_blank"
-                            class="btn-cyber secondary" style="margin-top: 20px; font-size: 0.8rem; padding: 10px 20px;">
-
-                            Voir Projet
-
-                        </a>
-
-                    </div>
-
-                </div>
 
 
 
@@ -2019,7 +2037,8 @@
                         <div class="skill-bar-fill" style="width: 75%; background: var(--neon-pink);"></div>
                     </div>
 
-                    <div class="skill-item" style="margin-top:15px"><span>Jira / Postman / Figma</span> <span>80%</span></div>
+                    <div class="skill-item" style="margin-top:15px"><span>Jira / Postman / Figma</span> <span>80%</span>
+                    </div>
 
                     <div class="skill-bar-bg">
                         <div class="skill-bar-fill" style="width: 80%; background: var(--neon-pink);"></div>
@@ -2270,12 +2289,12 @@
 
         }
 
-        
+
         // --- 5. Projects Horizontal Scroll ---
         function scrollProjects(direction) {
             const grid = document.getElementById('projectsGrid');
             const scrollAmount = 430; // Card width + gap
-            
+
             if (direction === 'left') {
                 grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             } else {
@@ -2289,7 +2308,7 @@
             projectsGrid.addEventListener('scroll', () => {
                 const leftBtn = document.querySelector('.scroll-btn.left');
                 const rightBtn = document.querySelector('.scroll-btn.right');
-                
+
                 // Hide left button at start
                 if (projectsGrid.scrollLeft <= 0) {
                     leftBtn.style.opacity = '0.3';
@@ -2298,7 +2317,7 @@
                     leftBtn.style.opacity = '1';
                     leftBtn.style.pointerEvents = 'auto';
                 }
-                
+
                 // Hide right button at end
                 if (projectsGrid.scrollLeft + projectsGrid.clientWidth >= projectsGrid.scrollWidth - 10) {
                     rightBtn.style.opacity = '0.3';
@@ -2308,7 +2327,7 @@
                     rightBtn.style.pointerEvents = 'auto';
                 }
             });
-            
+
             // Initial check
             projectsGrid.dispatchEvent(new Event('scroll'));
         }
